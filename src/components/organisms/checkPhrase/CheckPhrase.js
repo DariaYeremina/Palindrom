@@ -16,12 +16,17 @@ const Wrapper = styled.div`
 `;
 
 const StyledForm = styled.form`
-display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 `;
+
+const phraseOptions = {
+  name: 'phrase',
+  placeholder: 'Enter phrase',
+};
 
 const CheckPhrase = ({ title }) => {
   const formik = useFormik({
@@ -43,6 +48,8 @@ const CheckPhrase = ({ title }) => {
       <Heading>{ title }</Heading>
       <StyledForm onSubmit={formik.handleSubmit}>
         <ValidationInput
+          name={phraseOptions.name}
+          placeholder={phraseOptions.placeholder}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.phrase}
