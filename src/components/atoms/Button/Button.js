@@ -4,7 +4,7 @@ const Button = styled.button`
     display: flex;
     padding: 10px 25px;
     background-color: ${({ theme }) => theme.blue};
-    border: none;
+    border: 1px solid transparent;
     outline: none;
     border-radius: 20px;
     color: #fff;
@@ -12,10 +12,11 @@ const Button = styled.button`
     transition: .3s linear;
     font-weight: ${({ theme }) => theme.fontWeight.normal};
     font-size: ${({ theme }) => theme.fontSize.s};
+    margin-top: 15px;
     
     &:hover{
       background-color: #fff;
-      border: 1px solid ${({ theme }) => theme.blue};
+      border-color: ${({ theme }) => theme.blue};
       color: ${({ theme }) => theme.blue};
     }
 `;
