@@ -23,12 +23,12 @@ const ValidationInput = ({
       onChange={onChange}
       onBlur={onBlur}
     />
-    { error && <Error>{ error }</Error> }
+    { error && <Error>{ error.message || error }</Error> }
   </StyledWrapper>
 );
 
 ValidationInput.propTypes = {
-  error: propTypes.string,
+  error: propTypes.oneOfType([propTypes.string, propTypes.object]),
   type: propTypes.string,
   placeholder: propTypes.string.isRequired,
   name: propTypes.string.isRequired,

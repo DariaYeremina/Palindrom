@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import MainTemplate from '../../templates/mainTemplate';
 import CheckPhrase from '../../organisms/checkPhrase/CheckPhrase';
 import CheckResults from '../../organisms/checkResults/CheckResults';
 
@@ -12,15 +11,13 @@ const Wrapper = styled.div`
 `;
 
 const RootView = () => (
-  <MainTemplate>
-    <Wrapper>
-      <CheckPhrase title="Lorem ipsum" />
-      <CheckResults
-        title="Lorem ipsum"
-        results={[{}]}
-      />
-    </Wrapper>
-  </MainTemplate>
+  <Wrapper>
+    <CheckPhrase title="Lorem ipsum" />
+    <CheckResults
+      title="Lorem ipsum"
+      results={[{}]}
+    />
+  </Wrapper>
 );
 
 export default RootView;

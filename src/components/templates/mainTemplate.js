@@ -8,7 +8,6 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    width: 100vw;
 `;
 
 const MainTemplate = ({ children }) => (
@@ -18,4 +17,12 @@ const MainTemplate = ({ children }) => (
   </Wrapper>
 );
 
+// const mapDispatchToProps = (dispatch) => ({
+//   isUserLogged: () => dispatch(isUserLoggedAction()),
+// });
+
+// export default connect(
+//   null,
+//   mapDispatchToProps,
+// )(MainTemplate);
 export default MainTemplate;
