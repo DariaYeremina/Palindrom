@@ -8,9 +8,7 @@ import Heading from '../../atoms/Heading/Heading';
 import ValidationInput from '../../molecules/validationInput/ValidationInput';
 import Button from '../../atoms/Button/Button';
 import Error from '../../atoms/Error/Error';
-import { routes } from '../../../routes/routes';
 import Form from '../../atoms/Form/Form';
-import ConditionalRedirect from '../../templates/ConditionalRedirect';
 
 const Wrapper = styled.div`
     width: 40vw;
@@ -32,7 +30,7 @@ const passwordOptions = {
 };
 
 const LoginView = ({
-  authLoading, error, isLogged, authenticate, location,
+  authLoading, error, authenticate,
 }) => {
   const formik = useFormik({
     initialValues: {
@@ -52,44 +50,41 @@ const LoginView = ({
     },
   });
   return (
-    <ConditionalRedirect condition={isLogged} to={routes.base} from={location}>
-      <Wrapper>
-        <Heading>Lorem ipsum dolor</Heading>
-        <Form onSubmit={formik.handleSubmit}>
-          <ValidationInput
-            name={usernameOptions.name}
-            placeholder={usernameOptions.placeholder}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.username}
-            error={formik.touched.username && formik.errors.username}
-          />
-          <ValidationInput
-            type={passwordOptions.type}
-            name={passwordOptions.name}
-            placeholder={passwordOptions.placeholder}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.password}
-            error={formik.touched.password && formik.errors.password}
-          />
-          {error && <Error>{error}</Error>}
-          <Button
-            disabled={authLoading}
-            type="submit"
-          >
-            Login
-          </Button>
-        </Form>
-      </Wrapper>
-    </ConditionalRedirect>
+    <Wrapper>
+      <Heading>Lorem ipsum dolor</Heading>
+      <Form onSubmit={formik.handleSubmit}>
+        <ValidationInput
+          name={usernameOptions.name}
+          placeholder={usernameOptions.placeholder}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.username}
+          error={formik.touched.username && formik.errors.username}
+        />
+        <ValidationInput
+          type={passwordOptions.type}
+          name={passwordOptions.name}
+          placeholder={passwordOptions.placeholder}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.password}
+          error={formik.touched.password && formik.errors.password}
+        />
+        {error && <Error>{error}</Error>}
+        <Button
+          disabled={authLoading}
+          type="submit"
+        >
+          Login
+        </Button>
+      </Form>
+    </Wrapper>
   );
 };
 
-const mapStateToProps = ({ authLoading, error, isLogged }) => ({
+const mapStateToProps = ({ authLoading, error }) => ({
   authLoading,
   error,
-  isLogged,
 });
 
 const mapDispatchToProps = (dispatch) => ({

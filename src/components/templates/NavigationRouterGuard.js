@@ -1,4 +1,3 @@
-/* eslint-disable no-fallthrough */
 import React, { useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
