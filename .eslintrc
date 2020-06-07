@@ -4,7 +4,10 @@
   "globals": {
     "document": true,
     "window": true,
-    "localStorage": true
+    "localStorage": true,
+    "describe": true,
+    "test": true,
+    "expect": true
   },
   "rules": {
     "react/destructuring-assignment": 0,
