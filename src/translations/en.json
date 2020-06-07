@@ -1,0 +1,23 @@
+{
+    "errors": {
+        "required": "Field is required",
+        "min_6": "This field must contains at least 6 characters",
+        "letters_and_numbers": "This field can contains only letters and numbers"
+    },
+    "login": {
+        "title": "Login to application"
+    },
+    "buttons": {
+        "login": "Login",
+        "check": "Check palindrom"
+    },
+    "placeholders": {
+        "username": "Enter username",
+        "password": "Enter password",
+        "phrase": "Enter phrase"
+    },
+    "root_view": {
+        "title": "Check your phrase",
+        "subtitle": "You have already checked"
+    }
+}
