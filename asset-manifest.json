@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Palindrom/static/js/main.520eb9d4.chunk.js",
-    "main.js.map": "/Palindrom/static/js/main.520eb9d4.chunk.js.map",
+    "main.js": "/Palindrom/static/js/main.ddebb8e2.chunk.js",
+    "main.js.map": "/Palindrom/static/js/main.ddebb8e2.chunk.js.map",
     "runtime-main.js": "/Palindrom/static/js/runtime-main.36ef94ea.js",
     "runtime-main.js.map": "/Palindrom/static/js/runtime-main.36ef94ea.js.map",
     "static/js/2.5f87ba2a.chunk.js": "/Palindrom/static/js/2.5f87ba2a.chunk.js",
     "static/js/2.5f87ba2a.chunk.js.map": "/Palindrom/static/js/2.5f87ba2a.chunk.js.map",
     "index.html": "/Palindrom/index.html",
-    "precache-manifest.bfd2bf112de4084577f405d9c6471377.js": "/Palindrom/precache-manifest.bfd2bf112de4084577f405d9c6471377.js",
+    "precache-manifest.3cbae58b2b3acedce66fa0f3f5d462c3.js": "/Palindrom/precache-manifest.3cbae58b2b3acedce66fa0f3f5d462c3.js",
     "service-worker.js": "/Palindrom/service-worker.js",
     "static/js/2.5f87ba2a.chunk.js.LICENSE.txt": "/Palindrom/static/js/2.5f87ba2a.chunk.js.LICENSE.txt",
     "static/media/check.svg": "/Palindrom/static/media/check.39f7a838.svg",
@@ -16,6 +16,6 @@
   "entrypoints": [
     "static/js/runtime-main.36ef94ea.js",
     "static/js/2.5f87ba2a.chunk.js",
-    "static/js/main.520eb9d4.chunk.js"
+    "static/js/main.ddebb8e2.chunk.js"
   ]
 }
