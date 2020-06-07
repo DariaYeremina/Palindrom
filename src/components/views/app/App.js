@@ -11,7 +11,7 @@ import NavigationRouterGuard from '../../templates/NavigationRouterGuard';
 const App = () => (
   <Provider store={store}>
     <MainTemplate>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <NavigationRouterGuard path={routes.login} component={LoginView} />
           <NavigationRouterGuard path={routes.base} component={RootView} />
