@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/Palindrom/static/js/main.520eb9d4.chunk.js",
+    "main.js.map": "/Palindrom/static/js/main.520eb9d4.chunk.js.map",
+    "runtime-main.js": "/Palindrom/static/js/runtime-main.36ef94ea.js",
+    "runtime-main.js.map": "/Palindrom/static/js/runtime-main.36ef94ea.js.map",
+    "static/js/2.5f87ba2a.chunk.js": "/Palindrom/static/js/2.5f87ba2a.chunk.js",
+    "static/js/2.5f87ba2a.chunk.js.map": "/Palindrom/static/js/2.5f87ba2a.chunk.js.map",
+    "index.html": "/Palindrom/index.html",
+    "precache-manifest.bfd2bf112de4084577f405d9c6471377.js": "/Palindrom/precache-manifest.bfd2bf112de4084577f405d9c6471377.js",
+    "service-worker.js": "/Palindrom/service-worker.js",
+    "static/js/2.5f87ba2a.chunk.js.LICENSE.txt": "/Palindrom/static/js/2.5f87ba2a.chunk.js.LICENSE.txt",
+    "static/media/check.svg": "/Palindrom/static/media/check.39f7a838.svg",
+    "static/media/reject.svg": "/Palindrom/static/media/reject.e86bbe85.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36ef94ea.js",
+    "static/js/2.5f87ba2a.chunk.js",
+    "static/js/main.520eb9d4.chunk.js"
+  ]
+}
