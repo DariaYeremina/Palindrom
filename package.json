@@ -8,11 +8,14 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "formik": "^2.1.4",
+    "i18next": "^19.4.5",
     "modern-normalize": "^0.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.5.0",
     "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -50,5 +53,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "storybook-formik": "^2.1.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/DariaYeremina/Palindrom.git",
+  "author": "DariaYeremina <dariaeremina12@gmail.com>",
+  "license": "MIT"
 }

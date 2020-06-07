@@ -4,6 +4,7 @@ const initialState = {
   isLogged: false,
   authLoading: false,
   error: null,
+  results: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -33,6 +34,16 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLogged: action.isLogged,
+      };
+    case actions.GET_RESULTS:
+      return {
+        ...state,
+        results: [...action.payload],
+      };
+    case actions.ADD_RESULT:
+      return {
+        ...state,
+        results: [action.item, ...state.results],
       };
     default:
       return state;

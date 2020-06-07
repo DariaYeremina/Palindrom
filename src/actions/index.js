@@ -1,4 +1,5 @@
 import actions from '../constants/actions';
+import * as results from '../assets/palindroms.json';
 
 export const authenticate = (username, password) => (dispatch) => {
   dispatch({ type: actions.AUTH_REQUEST });
@@ -11,8 +12,8 @@ export const authenticate = (username, password) => (dispatch) => {
     na razie zamienię go pustym Promise
   */
 
-  return new Promise((resolve, reject) => {
-    resolve();
+  return new Promise((resolve) => {
+    resolve(username, password);
   })
     .then(() => {
       /* z backendu powinny wrócić dane użytkownika (np. id, name) oraz token.
@@ -33,6 +34,12 @@ export const authenticate = (username, password) => (dispatch) => {
 
 export const isUserLogged = () => {
   const isLogged = localStorage.getItem('isLogged');
-  console.log(isLogged);
   return { type: actions.IS_USER_LOGGED, isLogged };
 };
+
+export const getResults = () => {
+  const payload = results.data;
+  return { type: actions.GET_RESULTS, payload };
+};
+
+export const addResult = (item) => ({ type: actions.ADD_RESULT, item });

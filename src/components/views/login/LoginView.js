@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { authenticate as authenticateAction } from '../../../actions';
 import Heading from '../../atoms/Heading/Heading';
 import ValidationInput from '../../molecules/validationInput/ValidationInput';
@@ -16,22 +17,26 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+      width: 90vw;
+    }
 `;
 
 const usernameOptions = {
   name: 'username',
-  placeholder: 'Enter username',
 };
 
 const passwordOptions = {
   name: 'password',
-  placeholder: 'Enter password',
   type: 'password',
 };
 
 const LoginView = ({
   authLoading, error, authenticate,
 }) => {
+  const { t } = useTranslation();
+
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -39,23 +44,24 @@ const LoginView = ({
     },
     validationSchema: Yup.object({
       username: Yup.string()
-        .matches(/[A-Za-zĄĘÓŻŹŃŁąęóżźńł0-9]/, { message: 'This field can contains only letters and numbers' })
-        .required('Field is required'),
+        .matches(/[A-Za-zĄĘÓŻŹŃŁąęóżźńł0-9]/, { message: t('errors.letters_and_numbers') })
+        .required(t('errors.required')),
       password: Yup.string()
-        .required('Field is required')
-        .min(6, { message: 'This field must contains at least 6 characters' }),
+        .required(t('errors.required'))
+        .min(6, { message: t('errors.min_6') }),
     }),
     onSubmit: ({ username, password }) => {
       authenticate(username, password);
     },
   });
+
   return (
     <Wrapper>
-      <Heading>Lorem ipsum dolor</Heading>
+      <Heading>{t('login.title')}</Heading>
       <Form onSubmit={formik.handleSubmit}>
         <ValidationInput
           name={usernameOptions.name}
-          placeholder={usernameOptions.placeholder}
+          placeholder={t('placeholders.username')}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.username}
@@ -64,7 +70,7 @@ const LoginView = ({
         <ValidationInput
           type={passwordOptions.type}
           name={passwordOptions.name}
-          placeholder={passwordOptions.placeholder}
+          placeholder={t('placeholders.password')}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
@@ -75,7 +81,7 @@ const LoginView = ({
           disabled={authLoading}
           type="submit"
         >
-          Login
+          {t('buttons.login')}
         </Button>
       </Form>
     </Wrapper>

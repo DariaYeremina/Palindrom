@@ -8,15 +8,16 @@ const Wrapper = styled.div`
     margin: 20px auto;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      width: 90vw;
+    }
 `;
 
 const RootView = () => (
   <Wrapper>
-    <CheckPhrase title="Lorem ipsum" />
-    <CheckResults
-      title="Lorem ipsum"
-      results={[{}]}
-    />
+    <CheckPhrase />
+    <CheckResults />
   </Wrapper>
 );
 
